@@ -3,4 +3,26 @@ quick viewer for fast_dp results
 
 ## Installation instructions
 
-1. Create a conda environment and install dependencies
+See: https://docs.streamlit.io/library/get-started/installation#install-streamlit-on-macoslinux
+
+### Create a conda environment and install dependencies
+
+```
+conda create --name dpview python=3.9
+conda activate dpview
+conda install numpy pandas
+pip install streamlit
+```
+
+Test out the installation
+
+```
+streamlit hello
+```
+
+## Running dpview App
+
+```
+cd /path/to/user/data/directory
+streamlit run /path/to/dpview/Main.py
+```
