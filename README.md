@@ -11,6 +11,7 @@ See: https://docs.streamlit.io/library/get-started/installation#install-streamli
 conda create --name dpview python=3.9
 conda activate dpview
 conda install numpy pandas
+conda install -c conda-forge dxtbx
 pip install streamlit
 ```
 
