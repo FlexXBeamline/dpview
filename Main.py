@@ -39,21 +39,23 @@ COLUMNS = [
 
 st.set_page_config(layout="wide")
 
-st.title('DPVIEW')
-st.write('View results of automated data processing (fast_dp)')
+with st.sidebar:
 
-def update_directory():
-    try:
-        os.chdir(st.session_state.base_directory_input)
-    except:
-        st.error('Directory does not exist, please enter a new one')
+    st.title('DPVIEW')
+    st.write('View results of automated data processing (fast_dp)')
 
-st.text_input('Base Directory',
-    key='base_directory_input',
-    value=os.getcwd(),
-    on_change=update_directory)
+    def update_directory():
+        try:
+            os.chdir(st.session_state.base_directory_input)
+        except:
+            st.error('Directory does not exist, please enter a new one')
 
-st.button('refresh')
+    st.text_input('Base Directory',
+        key='base_directory_input',
+        value=os.getcwd(),
+        on_change=update_directory)
+            
+    st.button('refresh')
 
 def find_fast_dp_folders():
     fast_dp_folders = glob.glob('**/*_fast_dp/',recursive=True)
