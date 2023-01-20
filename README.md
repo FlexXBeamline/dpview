@@ -12,6 +12,7 @@ conda create --name dpview python=3.9
 conda activate dpview
 conda install numpy pandas
 pip install streamlit
+pip install streamlit-aggrid
 ```
 
 Test out the installation
