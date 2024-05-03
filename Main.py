@@ -22,7 +22,7 @@ ISIGI, RESOL, RMERGE = 'I/σI', 'Resolution', 'Rmerge'
 # columns in order
 COLUMNS = [DS, SG, CELL, RESOL, ISIGI, COMP, MULT, RMERGE]
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide",page_title="DPVIEW")
 
 with st.sidebar:
 
